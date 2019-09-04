@@ -3,11 +3,7 @@ import itertools
 import regex
 from functools import reduce
 
-# REGEX_OLD is the one support exactly two arguments in the Expression
-REGEX_OLD = r'^\(([a-z]+)\s+(\d+|\([a-z, 0-9, \s, \(, \)]+\))\s+(\d+|\([a-z, 0-9, \s, \(, \)]+\))\)$'
-# REGEX is the one support an arbitrary number of arguments. To support it, I also modified the codes in calculate
 REGEX = r'^\(([a-z]+)(\s+(?:\d+|\([a-z, 0-9, \s, \(, \)]+\)))+\)$'
-
 
 def calculate(s_express: str):
     """
