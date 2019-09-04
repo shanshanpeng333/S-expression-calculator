@@ -1,5 +1,5 @@
 # S-expression-calculator
-Write a command line program that acts as a simple calculator: it takes a single argument as an expression and prints out the integer result of evaluating it.
+A python program that acts as a simple calculator: it takes a single argument as an expression and prints out the integer result of evaluating it.
 
 ## Main idea of this solution:
 1. use regex to define the S-Expression
@@ -11,6 +11,7 @@ REGEX_OLD = r'^\(([a-z]+)\s+(\d+|\([a-z, 0-9, \s, \(, \)]+\))\s+(\d+|\([a-z, 0-9
 ```sh
 REGEX = r'^\(([a-z]+)(\s+(?:\d+|\([a-z, 0-9, \s, \(, \)]+\)))+\)$'
 ```
+3. Use the regex match function and recursion to find all the groups and do the calculation
 
 ## How to run it:
 install regex
